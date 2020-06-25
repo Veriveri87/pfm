@@ -1,0 +1,62 @@
+@if $include-links == true {
+    a {
+        font-size: 3em;
+        line-height: 3em;
+        display: block;
+        color: $color-txt1;
+        transition: $transition-timeOut ease-in-out;
+        overflow: hidden;
+        &:hover {
+            transition: $transition-timeIn ease-in-out;
+            transform: scale(1.3);
+        }
+        &:active {
+            color:$color3;
+            transition:none;
+        }
+        &::after{
+            content: "";
+            width: 0;
+            border: 2px solid #777070;
+            display: block;
+            position: relative;
+            top: -35px;
+            left: -4px;
+            transition: .6s ease-in-out;
+        }
+        &:hover::after{
+            width: 100%;
+        }
+
+     
+        //Iconos puestos en links con una fuente
+        /* &::before {
+            content: "";
+            font-family: icons;
+            font-size: 2em;
+            color: $color5;
+        } */
+    }
+
+    // Links Fondo Oscuro
+
+    @if $include-dark-bg == true {
+
+    .dark-bg {
+    a {
+        color: $color-txt2;
+        text-decoration: underline;
+        &:hover {
+            color: $color5;
+        }
+        &:active {
+            color:$color3;
+            transition:none;
+        }
+    }
+
+    }
+
+    }
+
+}

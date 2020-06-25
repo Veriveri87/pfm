@@ -1,0 +1,25 @@
+@if $include-lists == true {
+    ol {
+        list-style-position: $list-style-position ;
+        margin-bottom: $margin-between-paragraphs;
+    }
+    ul {
+        list-style-position: $list-style-position ;
+        list-style-type: $list-style-type;
+        margin-bottom: $margin-between-paragraphs;
+    }
+
+    //Iconos Desde Sprite PNG
+    ul li::before {
+        content: "";
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        background-image: url(/img/iconitos.png);
+        background-repeat: no-repeat;
+        background-position: -75px -72px;
+        margin-right: 5px;
+        vertical-align: bottom;
+    }
+}
+

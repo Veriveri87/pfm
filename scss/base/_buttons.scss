@@ -1,0 +1,166 @@
+@if $include-buttons == true {
+
+%btn {
+    width: initial;
+    cursor: pointer;
+    display: inline-block;
+    padding: $btn-paddingHeight $btn-paddingWidth;
+    @media (max-width: $media-m) {
+        padding: $btn-paddingHeight/1.5 $btn-paddingWidth/1.5;
+
+    }
+    font-family: principal;
+    border-radius: $btn-border-radius;
+    font-size: $btn-font-size;
+    white-space: nowrap;
+    margin: 10px;
+    border: $btn-border-width $btn-border-style;
+    line-height: $line-height-small;
+    transition: $transition-timeOut ease-in-out;
+    text-decoration: none;
+
+    &:hover {
+        transition: $transition-timeIn;
+    }
+    &:active {
+        transition: none;
+    }
+}
+
+.btn--primary,  a.btn--primary, input.btn--primary{
+    @extend %btn;
+    background-color: $color2;
+    color: $color-withe;
+    border-color: $color2;
+    &:hover {
+        background-color: $color5;
+        border-color: $color5;
+        .ico {
+            fill: $color2;
+        }
+    }
+    &::active {
+        background-color: $color3;
+        border-color: $color3;
+    }
+    .ico {
+        fill: $color-withe;
+    }
+}
+
+.btn--secondary,  a.btn--secondary, input.btn--secondary{
+    @extend %btn;
+    background-color: $color4;
+    color: $color-withe;
+    border-color: $color4;
+    &:hover {
+        background-color: $color5;
+        border-color: $color5;
+    }
+    &::active {
+        background-color: $color3;
+        border-color: $color3;
+    }
+}
+
+.btn--disabled,  a.btn--disabled, input.btn--disabled{
+    @extend %btn;
+    background-color: rgba($color5, .25);
+    color: $color-withe;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+.btnMenu {
+    position: fixed;
+    top: 35px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    background-color: inherit;
+    z-index: 200;
+}
+
+.btnMenu span{
+    background-color: $color-grey-dark;
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin: 0 auto;
+    position: relative;
+    top: -7px;
+    transition: .5s ease-in-out;
+}
+.btnMenu span::before,
+.btnMenu span::after {
+    content: "";
+    background-color: $color-grey-dark;
+    display: block;
+    width: 25px;
+    height: 2px;
+    position: absolute;
+    transition: .3s ease-in-out;
+}
+.btnMenu span::before {
+    top: 7px;
+}
+.btnMenu span::after {
+    top: 14px;
+}
+.btnX span::before  {
+    width: 0;
+}
+.btnX span {
+    transform: rotate(45deg);
+    transition-delay: .3s;
+}
+.btnX span::after {
+    transform: rotate(-90deg) translate(13px);
+    transition-delay: .3s;
+}
+.menu-open::before {
+    transform: scale(80);
+}
+
+
+//Botones Fondo Oscuro
+
+@if $include-dark-mode-buttons == true {
+.dark-bg {
+    .btn--primary,  a.btn--primary, input.btn--primary{
+        background-color: $color2;
+        color: $color-withe;
+        border-color: $color2;
+        &:hover {
+            background-color: $color5;
+            border-color: $color5;
+        }
+        &::active {
+            background-color: $color3;
+            border-color: $color3;
+        }
+    }
+    
+    .btn--secondary,  a.btn--secondary, input.btn--secondary{
+        background-color: $color4;
+        color: $color-withe;
+        border-color: $color4;
+        &:hover {
+            background-color: $color5;
+            border-color: $color5;
+        }
+        &::active {
+            background-color: $color3;
+            border-color: $color3;
+        }
+    }
+    
+    .btn--disabled,  a.btn--disabled, input.btn--disabled{
+        background-color: rgba($color5, .25);
+        color: $color-bg2;
+        
+    }
+}
+}
+
+
+}

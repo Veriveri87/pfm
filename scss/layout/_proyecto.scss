@@ -1,0 +1,144 @@
+@if $include-proyecto == true {
+
+body{
+    background-color: #FBC1BF;
+    background-image: url(/img/85148.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+nav{
+    background-color: #fad3d2;
+    border-radius: 20%;
+    padding: 5% 30%;
+    transition: .9s ease-in-out;
+    right: -150%;
+}
+a:hover{
+    color: $color-bg1;
+}
+.absolute {
+    opacity: 0;
+    position: relative;
+    top:300px;
+    right: -900px;
+    z-index: 500;
+    animation: animQuote 1.2s ease-in-out 2.2s forwards;
+  }
+  
+  @keyframes animQuote {
+    from {
+      opacity: 0;
+      right: -900px;
+    }
+    to {
+      opacity: 1;
+      right: -420px;
+    }
+  }
+
+.good {
+    font-size: 60px;
+}
+.design {
+    font-size: 80px;
+    margin-top: 1em;
+}
+.date {
+    font-size: 60px;
+}
+blockquote{
+    margin-top: 50px;
+    margin-left: 280px;
+}
+.me{
+    position: absolute;
+    margin-top: 15%;
+    left: 10%;
+    text-decoration: underline;
+}
+.yo{
+    width: 12%;
+    border-radius: 20%;
+    margin: 20% 0 0 30%;
+}
+@media(max-width: 400px){
+    .me{
+        top: 30%;
+    }
+    .yo{
+        width: 22%;
+        margin: 60% 0 0 15%;
+    }
+    .parrafo{
+        margin-top: -160px;
+    }
+    .header__logo{
+        display: none;
+    }
+}
+.parrafo{
+    width: 40%;
+    margin-left: 50%;
+    margin-top: -20%;
+}
+.mockup img{
+    width: 22%;
+    border-radius: 20px;
+    margin-top: 20%;
+}
+.mockup img:last-child{
+    margin-top: 5%;
+}
+
+form{
+    width: 50%;
+    margin: 15% auto;
+
+}
+input,
+textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 1.4em;
+    padding: 12px;
+}
+input[type="checkbox"]{
+    display: none;
+}
+input[type="checkbox"] + label {
+    position: relative;
+}
+input[type="checkbox"] + label::before {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 5px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+input[type="checkbox"]:checked + label::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url(/img/tick.svg) no-repeat;
+    background-size: 37px;
+    position: absolute;
+    top: -10px;
+    left: -3px;
+}
+input[type="button"]{
+    cursor: pointer;
+    width: initial;
+}
+.input-search {
+    position: relative;
+}
+textarea {
+    height: 120px;
+}
+
+}

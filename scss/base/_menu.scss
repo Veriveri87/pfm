@@ -1,0 +1,10 @@
+@if $include-menu == true {
+nav {
+    position: absolute;
+    top: 17%;
+    right: -50%;
+    z-index: 5000;
+    transition: .5s ease-in-out;
+}
+
+}
